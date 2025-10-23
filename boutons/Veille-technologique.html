@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Compétences</title>
+    <link rel="stylesheet" href="Projets.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            color: #333;
+        }
+        .nav-menu {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.5%;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        .nav-item {
+            padding: 8px 15px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .nav-item:hover {
+            background-color: #e0e0e0;
+        }
+        .competence-category {
+            margin-bottom: 20px;
+        }
+        .competence-subcategory {
+            margin-left: 20px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .competence-item {
+            margin-left: 40px;
+            margin-top: 5px;
+            color: #555;
+        }
+        .content {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mes Compétences en Informatique</h1>
+
+    <!-- Menu horizontal -->
+    <div class="nav-menu">
+        <div class="nav-item" onclick="showSection('administration')">Administration Système</div>
+        <div class="nav-item" onclick="showSection('supervision')">Supervision & Gestion</div>
+        <div class="nav-item" onclick="showSection('reseaux')">Réseaux</div>
+        <div class="nav-item" onclick="showSection('bdd')">Bases de Données</div>
+        <div class="nav-item" onclick="showSection('dev')">Développement & Scripting</div>
+        <div class="nav-item" onclick="showSection('virtualisation')">Virtualisation</div>
+        <div class="nav-item" onclick="showSection('support')">Support Utilisateur</div>
+    </div>
+
+    <!-- Contenu des sections -->
+    <div class="content">
+        <div id="administration" class="competence-category">
+            <div class="competence-subcategory">Windows</div>
+            <div class="competence-item">• Active Directory (AD)</div>
+            <div class="competence-item">• Stratégies de Groupe (GPO)</div>
+
+            <div class="competence-subcategory">Linux</div>
+            <div class="competence-item">• Gestion des services</div>
+            <div class="competence-item">• Maintenance</div>
+            <div class="competence-item">• Sécurité</div>
+
+            <div class="competence-subcategory">Automatisation</div>
+            <div class="competence-item">• Déploiement Linux</div>
+            <div class="competence-item">• Déploiement Windows</div>
+        </div>
+
+        <div id="supervision" class="competence-category" style="display: none;">
+            <div class="competence-item">• GLPI</div>
+            <div class="competence-item">• ADDS</div>
+            <div class="competence-item">• Nagios</div>
+        </div>
+
+        <div id="reseaux" class="competence-category" style="display: none;">
+            <div class="competence-subcategory">Protocoles</div>
+            <div class="competence-item">• DNS</div>
+            <div class="competence-item">• DHCP</div>
+            <div class="competence-item">• Sous-réseaux</div>
+
+            <div class="competence-subcategory">Matériel</div>
+            <div class="competence-item">• Configuration de switchs</div>
+            <div class="competence-item">• Routage</div>
+
+            <div class="competence-item">• Paramétrage Wi-Fi</div>
+            <div class="competence-item">• VirtualHost</div>
+        </div>
+
+        <div id="bdd" class="competence-category" style="display: none;">
+            <div class="competence-item">• SQL</div>
+            <div class="competence-item">• MariaDB</div>
+            <div class="competence-item">• Oracle</div>
+        </div>
+
+        <div id="dev" class="competence-category" style="display: none;">
+            <div class="competence-subcategory">Langages Web</div>
+            <div class="competence-item">• HTML</div>
+            <div class="competence-item">• CSS</div>
+            <div class="competence-item">• PHP</div>
+
+            <div class="competence-subcategory">Scripting</div>
+            <div class="competence-item">• Bash</div>
+            <div class="competence-item">• PowerShell</div>
+        </div>
+
+        <div id="virtualisation" class="competence-category" style="display: none;">
+            <div class="competence-item">• VMware</div>
+            <div class="competence-item">• VirtualBox</div>
+        </div>
+
+        <div id="support" class="competence-category" style="display: none;">
+            <div class="competence-item">• Résolution de problèmes</div>
+            <div class="competence-item">• Communication adaptée</div>
+            <div class="competence-item">• Accompagnement utilisateur</div>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Masquer toutes les sections
+            document.querySelectorAll('.competence-category').forEach(function(section) {
+                section.style.display = 'none';
+            });
+            // Afficher la section sélectionnée
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Projets</title>
+    <link rel="stylesheet" href="Projets.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            color: #333;
+        }
+        .nav-menu {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.5%;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        .nav-item {
+            padding: 8px 15px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .nav-item:hover {
+            background-color: #e0e0e0;
+        }
+        .news-category {
+            margin-bottom: 20px;
+        }
+        .news-subcategory {
+            margin-left: 20px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .news-item {
+            margin-left: 40px;
+            margin-top: 5px;
+            color: #555;
+        }
+        .content {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mes Compétences en Informatique</h1>
+
+    <!-- Menu horizontal -->
+    <div class="nav-menu">
+        <div class="nav-item" onclick="showSection('administration')">Windows</div>
+        <div class="nav-item" onclick="showSection('supervision')">Linux</div>
+        <div class="nav-item" onclick="showSection('reseaux')">Avancées Technologiques</div>
+        <div class="nav-item" onclick="showSection('bdd')">Bases de Données et Sauvegardes</div>
+        <div class="nav-item" onclick="showSection('dev')">CyberSécurité</div>
+        <div class="nav-item" onclick="showSection('virtualisation')">IA en entreprises</div>
+        <div class="nav-item" onclick="showSection('support')">Sources</div>
+    </div>
+
+    <!-- Contenu des sections -->
+    <div class="content">
+        <div id="administration" class="news-category">
+            <div class="news-subcategory">Windows</div>
+            <div class="news-item">• Active Directory (AD)</div>
+            <div class="news-item">• Stratégies de Groupe (GPO)</div>
+
+            <div class="news-subcategory">Linux</div>
+            <div class="news-item">• Gestion des services</div>
+            <div class="news-item">• Maintenance</div>
+            <div class="news-item">• Sécurité</div>
+
+            <div class="news-subcategory">Automatisation</div>
+            <div class="news-item">• Déploiement Linux</div>
+            <div class="news-item">• Déploiement Windows</div>
+        </div>
+
+        <div id="supervision" class="news-category" style="display: none;">
+            <div class="news-item">• GLPI</div>
+            <div class="news-item">• ADDS</div>
+            <div class="news-item">• Nagios</div>
+        </div>
+
+        <div id="reseaux" class="news-category" style="display: none;">
+            <div class="news-subcategory">Protocoles</div>
+            <div class="news-item">• DNS</div>
+            <div class="news-item">• DHCP</div>
+            <div class="news-item">• Sous-réseaux</div>
+
+            <div class="news-subcategory">Matériel</div>
+            <div class="news-item">• Configuration de switchs</div>
+            <div class="news-item">• Routage</div>
+
+            <div class="news-item">• Paramétrage Wi-Fi</div>
+            <div class="news-item">• VirtualHost</div>
+        </div>
+
+        <div id="bdd" class="news-category" style="display: none;">
+            <div class="news-item">• SQL</div>
+            <div class="news-item">• MariaDB</div>
+            <div class="news-item">• Oracle</div>
+        </div>
+
+        <div id="dev" class="news-category" style="display: none;">
+            <div class="news-subcategory">Langages Web</div>
+            <div class="news-item">• HTML</div>
+            <div class="news-item">• CSS</div>
+            <div class="news-item">• PHP</div>
+
+            <div class="news-subcategory">Scripting</div>
+            <div class="news-item">• Bash</div>
+            <div class="news-item">• PowerShell</div>
+        </div>
+
+        <div id="virtualisation" class="news-category" style="display: none;">
+            <div class="news-item">• VMware</div>
+            <div class="news-item">• VirtualBox</div>
+        </div>
+
+        <div id="support" class="news-category" style="display: none;">
+            <div class="news-item">• Résolution de problèmes</div>
+            <div class="news-item">• Communication adaptée</div>
+            <div class="news-item">• Accompagnement utilisateur</div>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Masquer toutes les sections
+            document.querySelectorAll('.news-category').forEach(function(section) {
+                section.style.display = 'none';
+            });
+            // Afficher la section sélectionnée
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
+

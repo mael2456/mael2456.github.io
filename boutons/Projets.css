@@ -1,0 +1,12 @@
+.nav-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5%; /* Espacement entre les éléments du menu */
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    background-color: #ffd700; /* Jaune vif (or) */
+    padding: 10px; /* Espace interne pour que le contenu ne colle pas aux bords */
+    border-radius: 5px; /* Coins légèrement arrondis (optionnel) */
+}
+

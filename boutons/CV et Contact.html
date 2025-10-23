@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="stylesheet" href="../Contacts.css">
+</head>
+<body>
+    <h1>Contacts</h1>
+    <div>
+        <p>Numéro de Téléphone:</p>
+        <img src="../download/num.png" alt="Numéro mael" width="250">
+        <p>Mail :</p>
+        <p>Je consulte mes mails tout les jours.</p>
+    </div>
+    <div>
+        <p>Vous pouvez me joindre par mail à l’adresse suivante :</p>
+       <span id="email"></span>
+
+<div id="email" class="plain-email"></div>
+
+<script>
+// adresse splitée pour éviter le scrapping
+const id = "Mesure anti-spam copier après l'espace mael.leguern2";
+const idhebergeur = "outlook.com";
+const addresseelectronique = `${id}@${idhebergeur}`;
+
+
+// Affichage en texte simple (pas de lien)
+document.getElementById("email").textContent = addresseelectronique;
+</script>
+</body>
+</html>
