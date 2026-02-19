@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0f1419 !important;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: yellow;
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: yellow;
+}
+/*Photo de profil*/
+.profil {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+
+
+.description p {
+    max-width: 500px;
+}
+
+.competences ul {
+    list-style: none;
+}
+
+.competences li {
+    background-color: #1a222c;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
+.Hobby ul {
+    list-style: none;
+}
+
+.Hobby li {
+    background-color: #1a222c;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
+.contact {
+    margin-top: 40px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 0.9rem;
+    color: #888;
+}
+/*Smartphone*/
+
+
+@media (max-width: 768px) {
+
+    .container {
+        margin: 20px auto;
+    }
+
+    .profil {
+        flex-direction: column;
+        text-align: center;
+    }
+
+   
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .competences li {
+        font-size: 0.9rem;
+    }
+}

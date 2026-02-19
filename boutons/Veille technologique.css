@@ -1,0 +1,90 @@
+.header-bar {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+
+        }
+        h1 {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            color: white;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            color: #333;
+        }
+        .nav-menu {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.5%;
+            margin-bottom: 20px;
+            border-bottom: 1px solid black;
+            padding-bottom: 10px;
+        }
+        .nav-item {
+            padding: 8px 15px;
+            background-color: lightyellow;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .nav-item:hover {
+            background-color: grey;
+        }
+        .competence-category {
+            margin-bottom: 20px;
+        }
+        .competence-subcategory {
+            margin-left: 20px;
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: xx-large;
+        }
+        .competence-item {
+            margin-left: 40px;
+            margin-top: 5px;
+            color: white;
+        }
+        .content {
+            margin-top: 20px;
+            
+        }
+         body , .news-item , .news-category {
+        background-color: #121212;  /* Fond noir légèrement doux */
+        color: white;             /* Texte blanc */
+        font-family: 'Roboto', sans-serif;
+        line-height: 1.5;           /* Espacement du texte */
+        margin: 0;
+        padding: 0;
+    
+        }
+        .home-button {
+        background-color:grey;
+        color: white;
+        padding: 15px 27px;
+        border-radius: 6px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: 0.3s ease;
+        }
+
+        .home-button:hover {
+        background-color: #333;
+        transform: scale(1.05);
+        }
+        .nav-menu {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2.5%; /* Espacement entre les éléments du menu */
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        background-color: yellow; /* Esthethique :D */
+        padding: 10px; /* Espace interne pour que le contenu ne colle pas aux bords */
+        border-radius: 5px; /* Coins légèrement arrondis (optionnel) */
+        } 

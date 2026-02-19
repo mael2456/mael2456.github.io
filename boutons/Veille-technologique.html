@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veille Technologique</title>
+    <link rel="stylesheet" href="Veille technologique.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="header-bar">   
+    <h1>Veille Technologique <a href="../index.html" class="home-button">🏠 Accueil</a></h1>
+    </div>
+
+ 
+    <!-- Menu horizontal -->
+    <div class="nav-menu">
+        <div class="nav-item" onclick="showSection('administration')">OS</div>
+        <div class="nav-item" onclick="showSection('supervision')">Supervision & Gestion</div>
+        <div class="nav-item" onclick="showSection('reseaux')">Réseaux</div>
+        <div class="nav-item" onclick="showSection('bdd')">Bases de Données</div>
+        <div class="nav-item" onclick="showSection('dev')">Développement & Scripting</div>
+    </div>
+
+    <!-- Contenu des sections -->
+    <div class="content">
+        <div id="administration" class="competence-category">
+            <div class="competence-subcategory"><img src="../download/Windows.png" style=width:4%;vertical-align:middle>  Windows</div>
+            <hr style="border: 1px solid yellow; width: 15%; float: left;">
+            <br>
+            <div class="competence-item">• Active Directory (AD)</div>
+            <div class="competence-item">• Stratégies de Groupe (GPO)</div>
+
+            <div class="competence-subcategory">
+              <img src="../download/tux.png" style=width:4%;vertical-align:middle> Linux 
+            </div>
+            <hr style="border: 1px solid yellow; width: 15%; float: left;">
+            <br>
+            <div class="competence-item">• Gestion des services</div>
+            <div class="competence-item">• Maintenance</div>
+            <div class="competence-item">• Sécurité</div>
+
+            <div class="competence-subcategory"><img src="../download/Engrenages.png" style=width:4%;vertical-align:middle>  Automatisation</div>
+            <hr style="border: 1px solid yellow; width: 15%; float: left;">
+            <br>
+            <div class="competence-item">• Déploiement Linux</div>
+            <div class="competence-item">• Déploiement Windows</div>
+        </div>
+
+        <div id="supervision" class="competence-category" style="display: none;">
+            <div class="competence-subcategory"> GLPI</div>
+              <hr style="border: 1px solid yellow; width: 10%; float: left;">
+            <br>
+            <div class="competence-subcategory"> ADDS</div>
+              <hr style="border: 1px solid yellow; width: 10%; float: left;">
+            <br>
+            <div class="competence-subcategory"> Nagios</div>
+              <hr style="border: 1px solid yellow; width: 10%; float: left;">
+            <br>
+        </div>
+
+        <div id="reseaux" class="competence-category" style="display: none;">
+            <div class="competence-subcategory">Protocoles</div>
+              <hr style="border: 1px solid yellow; width: 10%; float: left;">
+            <br>
+            <div class="competence-item">• DNS</div>
+            <div class="competence-item">• DHCP</div>
+            <div class="competence-item">• Sous-réseaux</div>
+
+            <div class="competence-subcategory">Matériel</div>
+              <hr style="border: 1px solid yellow; width: 10%; float: left;">
+            <br>
+            <div class="competence-item">• Configuration de switchs</div>
+            <div class="competence-item">• Routage</div>
+
+            <div class="competence-item">• Paramétrage Wi-Fi</div>
+            <div class="competence-item">• VirtualHost</div>
+            <div class="competence-subcategory">Sécurité</div>
+              <hr style="border: 1px solid yellow; width: 10%; float: left;">
+            <br>
+            <div class="competence-item">• Configuration de sécurité des switchs</div>
+            <div class="competence-item">• Routage sécurisé</div>
+
+            <div class="competence-item">• Paramétrage Wi-Fi</div>
+            <div class="competence-item">• VirtualHost</div>
+            
+        </div>
+
+        <div id="bdd" class="competence-category" style="display: none;">
+            <div class="competence-subcategory"> SQL</div>
+              <hr style="border: 1px solid yellow; width: 10%; float: left;">
+            <br>
+            <div class="competence-subcategory"> MariaDB</div>
+              <hr style="border: 1px solid yellow; width: 10%; float: left;">
+            <br>
+            <div class="competence-subcategory"> Oracle</div>
+              <hr style="border: 1px solid yellow; width: 10%; float: left;">
+            <br>
+            <div class="competence-subcategory"> Sécurité BDD</div>
+            <hr style="border: 1px solid yellow; width: 10%; float: left;">
+        </div>
+
+        <div id="dev" class="competence-category" style="display: none;">
+          <div class="competence-subcategory">Langages Web</div>
+          <hr style="border: 1px solid yellow; width: 10%; float: left;">
+          <br> 
+            <div class="competence-item">• HTML</div>
+            <div class="competence-item">• CSS</div>
+            <div class="competence-item">• PHP</div> 
+          <div class="competence-subcategory">Scripting</div>
+          <hr style="border: 1px solid yellow; width: 10%; float: left;">
+          <br>
+            <div class="competence-item">• Bash</div>
+            <div class="competence-item">• PowerShell</div>
+
+                     
+</div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Masquer toutes les sections
+            document.querySelectorAll('.competence-category').forEach(function(section) {
+                section.style.display = 'none';});
+            // Afficher la section sélectionnée
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
+

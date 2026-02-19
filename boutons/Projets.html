@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Projets</title>
+    <link rel="stylesheet" href="Projets.css">
+    
+</head>
+<body>
+    <div class="header-bar">
+        <h1>Mes Projets <a href="../index.html" class="home-button">🏠 Accueil</a></h1>
+    </div>
+
+    <!-- Menu projets -->
+    <div class="nav-menu">
+        <div class="nav-item" onclick="showSection('projet1', this)">Projet 1: Mise en place LAN</div>
+        <div class="nav-item" onclick="showSection('projet2', this)">Projet 2: Firewall & VPN</div>
+        <div class="nav-item" onclick="showSection('projet3', this)">Projet 3: Supervision Réseau</div>
+        <div class="nav-item" onclick="showSection('projet4', this)">Projet 4: Virtualisation/Conteneur</div>
+        <div class="nav-item" onclick="showSection('projet5', this)">Projet 5: Scripting et Automatisation</div>
+    </div>
+
+    <!-- Contenu des projets -->
+    <div class="content">
+
+        <div id="projet1" class="news-category">
+            <div class="news-subcategory">Mise en place LAN</div>
+            <hr>
+            <div class="news-item">• VLAN et DHCP configurés</div>
+            <div class="news-item">• Switchs manageable et routage de base</div>
+            <div class="news-item">• Wi-Fi sécurisé</div>
+            <div class="news-item">
+                <a href="../download/lan-rapport" download>📄 Rapport PDF</a>
+            </div>
+        </div>
+
+        <div id="projet2" class="news-category">
+            <div class="news-subcategory">Firewall & VPN</div>
+            <hr>
+            <div class="news-item">• Filtrage trafic entrant/sortant</div>
+            <div class="news-item">• VPN IPsec pour télétravail</div>
+            <div class="news-item">• Configuration documentée</div>
+        </div>
+
+        <div id="projet3" class="news-category">
+            <div class="news-subcategory">Supervision Réseau</div>
+            <hr>
+            <div class="news-item">• Nagios et Zabbix configurés</div>
+            <div class="news-item">• Monitoring actif et alertes</div>
+            <div class="news-item">• Tableau de bord opérationnel</div>
+        </div>
+
+        <div id="projet4" class="news-category">
+            <div class="news-subcategory">Virtualisation/Conteneur</div>
+            <hr>
+            <div class="news-item">• GNS3 / EVE-NG pour simulation topologies</div>
+            <div class="news-item">• VMware et VirtualBox pour tests</div>
+            <div class="news-item">• Conteneur</div>
+        </div>
+
+        <div id="projet5" class="news-category">
+            <div class="news-subcategory">Scripting et Automatisation</div>
+            <hr>
+            <div class="news-item">• Bash et PowerShell pour déploiement</div>
+            <div class="news-item">• Déploiement automatique Linux Mint</div>
+            <div class="news-item">• Déploiement Windows personnalisé</div>
+            <div class="news-item">• Automatisation tâches répétitives</div>
+            <div class="news-item">
+                <a href="../download/Tri-chapitre" download>📄 Exemple Tri-Chapitre – Rapport PDF</a>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function showSection(sectionId, element) {
+            // Masquer toutes les sections
+            document.querySelectorAll('.news-category').forEach(function(section) {
+                section.style.display = 'none';
+            });
+            // Afficher la section sélectionnée
+            document.getElementById(sectionId).style.display = 'block';
+
+            // Retirer la classe active de tous les boutons
+            document.querySelectorAll('.nav-item').forEach(function(btn) {
+                btn.classList.remove('active');
+            });
+            // Ajouter la classe active au bouton cliqué
+            element.classList.add('active');
+        }
+
+        // Afficher le premier projet par défaut
+        document.addEventListener('DOMContentLoaded', function() {
+            const firstButton = document.querySelector('.nav-item');
+            showSection('projet1', firstButton);
+        });
+    </script>
+</body>
+</html>
